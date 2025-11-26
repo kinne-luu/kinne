@@ -24,7 +24,7 @@
       width: 100%;
       height: 100%;
       /* Cho phép cuộn */
-      overflow-y: overlay; 
+      overflow-y: overlay;
     }
 
     body {
@@ -36,15 +36,18 @@
 
     /* Định dạng thanh cuộn */
     ::-webkit-scrollbar {
-      width: 8px; /* Độ rộng thanh cuộn */
+      width: 8px;
+      /* Độ rộng thanh cuộn */
     }
 
     ::-webkit-scrollbar-track {
-      background: transparent; /* Nền trong suốt */
+      background: transparent;
+      /* Nền trong suốt */
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: transparent; /* Mặc định ẩn */
+      background-color: transparent;
+      /* Mặc định ẩn */
       border-radius: 10px;
       border: 2px solid transparent;
       background-clip: content-box;
@@ -53,7 +56,8 @@
 
     /* Class này sẽ được JS thêm vào body khi cuộn */
     body.is-scrolling ::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.6); /* Hiện màu trắng khi cuộn */
+      background-color: rgba(255, 255, 255, 0.6);
+      /* Hiện màu trắng khi cuộn */
     }
 
     /* --- CÁC PHẦN CŨ --- */
@@ -104,7 +108,11 @@
       mask-image: radial-gradient(circle at 100px 100%, transparent 75px, black 76px);
     }
 
-    .layer-cover img { width: 100%; height: 100%; object-fit: cover; }
+    .layer-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .layer-avatar {
       position: absolute;
@@ -121,7 +129,11 @@
       z-index: 10;
     }
 
-    .layer-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .layer-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .layer-avatar:hover {
       transform: translateZ(90px) scale(1.1);
@@ -174,34 +186,66 @@
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(6, 199, 85, 0.7); }
-      70% { box-shadow: 0 0 0 8px rgba(6, 199, 85, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(6, 199, 85, 0); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(6, 199, 85, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(6, 199, 85, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(6, 199, 85, 0);
+      }
     }
 
     @keyframes glitch-anim {
-      0% { transform: translate(0); }
-      20% { transform: translate(-2px, 2px); }
-      40% { transform: translate(-2px, -2px); }
-      60% { transform: translate(2px, 2px); }
-      80% { transform: translate(2px, -2px); }
-      100% { transform: translate(0); }
+      0% {
+        transform: translate(0);
+      }
+
+      20% {
+        transform: translate(-2px, 2px);
+      }
+
+      40% {
+        transform: translate(-2px, -2px);
+      }
+
+      60% {
+        transform: translate(2px, 2px);
+      }
+
+      80% {
+        transform: translate(2px, -2px);
+      }
+
+      100% {
+        transform: translate(0);
+      }
     }
 
     @media (max-width: 768px) {
-      .blur-box { width: 300px; height: 350px; }
+      .blur-box {
+        width: 300px;
+        height: 350px;
+      }
+
       .layer-cover {
         -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 75px, black 76px);
         mask-image: radial-gradient(circle at 50% 100%, transparent 75px, black 76px);
       }
+
       .layer-avatar {
         left: 50%;
         transform: translateX(-50%) translateZ(60px);
         top: 100px;
       }
+
       .layer-avatar:hover {
         transform: translateX(-50%) translateZ(90px) scale(1.1);
       }
+
       .layer-info {
         top: 240px;
         left: 0;
@@ -306,23 +350,78 @@
       z-index: 100;
     }
 
-    .fb-color:hover { background: #1877F2; box-shadow: 0 5px 20px rgba(24, 119, 242, 0.5); }
-    .ig-color:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); box-shadow: 0 5px 20px rgba(220, 39, 67, 0.5); }
-    .x-color:hover { background: #000; box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3); }
-    .ani-color:hover { background: #02A9FF; box-shadow: 0 5px 20px rgba(2, 169, 255, 0.5); }
-    .line-color:hover { background: #06C755; box-shadow: 0 5px 20px rgba(6, 199, 85, 0.5); }
-    .dc-color:hover { background: #5865F2; box-shadow: 0 5px 20px rgba(88, 101, 242, 0.5); }
+    .fb-color:hover {
+      background: #1877F2;
+      box-shadow: 0 5px 20px rgba(24, 119, 242, 0.5);
+    }
 
-    .fb-pos { top: 28%; left: 7%; }
-    .ig-pos { top: 28%; left: 39%; }
-    .x-pos { top: 28%; left: 70%; }
-    .ani-pos { top: 60%; left: 7%; }
+    .ig-color:hover {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      box-shadow: 0 5px 20px rgba(220, 39, 67, 0.5);
+    }
 
-    .line-wrapper { position: absolute; top: 60%; left: 39%; width: 45px; height: 45px; }
-    .discord-wrapper { position: absolute; top: 60%; left: 70%; width: 45px; height: 45px; cursor: pointer; }
-    
-    .line-wrapper .social-btn, .discord-wrapper .social-btn {
-      position: relative; top: 0; left: 0;
+    .x-color:hover {
+      background: #000;
+      box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .ani-color:hover {
+      background: #02A9FF;
+      box-shadow: 0 5px 20px rgba(2, 169, 255, 0.5);
+    }
+
+    .line-color:hover {
+      background: #06C755;
+      box-shadow: 0 5px 20px rgba(6, 199, 85, 0.5);
+    }
+
+    .dc-color:hover {
+      background: #5865F2;
+      box-shadow: 0 5px 20px rgba(88, 101, 242, 0.5);
+    }
+
+    .fb-pos {
+      top: 28%;
+      left: 7%;
+    }
+
+    .ig-pos {
+      top: 28%;
+      left: 39%;
+    }
+
+    .x-pos {
+      top: 28%;
+      left: 70%;
+    }
+
+    .ani-pos {
+      top: 60%;
+      left: 7%;
+    }
+
+    .line-wrapper {
+      position: absolute;
+      top: 60%;
+      left: 39%;
+      width: 45px;
+      height: 45px;
+    }
+
+    .discord-wrapper {
+      position: absolute;
+      top: 60%;
+      left: 70%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+    }
+
+    .line-wrapper .social-btn,
+    .discord-wrapper .social-btn {
+      position: relative;
+      top: 0;
+      left: 0;
     }
 
     .qr-tooltip-dark {
@@ -501,9 +600,23 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     }
 
-    .box-1 { top: 160%; left: 50%; transform: translate(-50%, -50%); }
-    .box-2 { top: 270%; left: 50%; transform: translate(-50%, -50%); }
-    .box-3 { top: 380%; left: 50%; transform: translate(-50%, -50%); }
+    .box-1 {
+      top: 160%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box-2 {
+      top: 270%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box-3 {
+      top: 380%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     .my-games {
       color: rgb(255, 249, 162);
@@ -515,7 +628,10 @@
       font-weight: 200;
     }
 
-    .Wuwa_logo, .A9_logo, .Calabiyau_logo, .Endfield_logo {
+    .Wuwa_logo,
+    .A9_logo,
+    .Calabiyau_logo,
+    .Endfield_logo {
       position: absolute;
       top: 17%;
       left: 5%;
@@ -527,11 +643,21 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .Wuwa_logo img, .A9_logo img, .Calabiyau_logo img, .Endfield_logo img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+    .Wuwa_logo img,
+    .A9_logo img,
+    .Calabiyau_logo img,
+    .Endfield_logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
-    .Username1, .Username2, .Username3, .Username4 {
+    .Username1,
+    .Username2,
+    .Username3,
+    .Username4 {
       font-family: 'Quicksand', sans-serif;
       position: absolute;
       left: 36%;
@@ -543,7 +669,10 @@
       margin-bottom: 4px;
     }
 
-    .UID1, .UID2, .UID3, .UID4 {
+    .UID1,
+    .UID2,
+    .UID3,
+    .UID4 {
       font-family: 'Nunito', sans-serif;
       position: absolute;
       left: 36%;
@@ -553,12 +682,42 @@
       text-shadow: 0 2px 5px rgba(255, 209, 224, 0.25);
     }
 
-    .Username1 { top: 20%; } .UID1 { top: 26%; }
-    .Username2 { top: 40%; } .UID2 { top: 46%; }
-    .Username3 { top: 61%; } .UID3 { top: 67%; }
-    .Username4 { top: 82%; } .UID4 { top: 88%; }
+    .Username1 {
+      top: 20%;
+    }
 
-    .copy-icon1, .copy-icon2, .copy-icon3, .copy-icon4 {
+    .UID1 {
+      top: 26%;
+    }
+
+    .Username2 {
+      top: 40%;
+    }
+
+    .UID2 {
+      top: 46%;
+    }
+
+    .Username3 {
+      top: 61%;
+    }
+
+    .UID3 {
+      top: 67%;
+    }
+
+    .Username4 {
+      top: 82%;
+    }
+
+    .UID4 {
+      top: 88%;
+    }
+
+    .copy-icon1,
+    .copy-icon2,
+    .copy-icon3,
+    .copy-icon4 {
       position: absolute;
       top: 0%;
       font-size: 14px;
@@ -568,11 +727,23 @@
       z-index: 10;
     }
 
-    .copy-icon1 { left: 134%; }
-    .copy-icon2, .copy-icon3 { left: 150%; }
-    .copy-icon4 { left: 235%; }
+    .copy-icon1 {
+      left: 134%;
+    }
 
-    .copy-icon1:hover, .copy-icon2:hover, .copy-icon3:hover, .copy-icon4:hover {
+    .copy-icon2,
+    .copy-icon3 {
+      left: 150%;
+    }
+
+    .copy-icon4 {
+      left: 235%;
+    }
+
+    .copy-icon1:hover,
+    .copy-icon2:hover,
+    .copy-icon3:hover,
+    .copy-icon4:hover {
       color: #b388ff;
       transform: scale(1.2);
     }
@@ -584,9 +755,9 @@
       left: 60.3%;
       transform: translate(-50%, -50%);
       /* Chỉnh kích thước thành hình chữ nhật ngang */
-      width: 300px; 
+      width: 300px;
       height: 90px;
-      
+
       border-radius: 30px;
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(18px) saturate(140%);
@@ -595,10 +766,11 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
       z-index: 20;
       overflow: hidden;
-      
+
       /* Flex ngang */
       display: flex;
-      flex-direction: row; /* Xếp ngang */
+      flex-direction: row;
+      /* Xếp ngang */
       align-items: center;
       padding: 15px;
       gap: 15px;
@@ -608,7 +780,8 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      flex-grow: 1; /* Chiếm phần lớn diện tích */
+      flex-grow: 1;
+      /* Chiếm phần lớn diện tích */
     }
 
     .album-art {
@@ -620,14 +793,19 @@
       flex-shrink: 0;
     }
 
-    .album-art img { width: 100%; height: 100%; object-fit: cover; }
+    .album-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .track-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
       overflow: hidden;
-      max-width: 130px; /* Giới hạn chiều rộng chữ */
+      max-width: 130px;
+      /* Giới hạn chiều rộng chữ */
     }
 
     .track-name {
@@ -636,7 +814,9 @@
       font-size: 14px;
       color: #fff;
       margin: 0 0 2px 0;
-      white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     .track-artist {
@@ -654,10 +834,13 @@
     }
 
     .play-btn-circle {
-      width: 45px; height: 45px;
+      width: 45px;
+      height: 45px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      display: flex; justify-content: center; align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
       transition: all 0.2s ease;
     }
@@ -669,10 +852,18 @@
     }
 
     .play-btn-circle i {
-      color: #fff; font-size: 16px; margin-left: 3px;
+      color: #fff;
+      font-size: 16px;
+      margin-left: 3px;
     }
-    .play-btn-circle:hover i { color: #000; }
-    .fa-pause { margin-left: 0 !important; }
+
+    .play-btn-circle:hover i {
+      color: #000;
+    }
+
+    .fa-pause {
+      margin-left: 0 !important;
+    }
 
 
     /* === DRAWER BOX === */
@@ -684,7 +875,8 @@
       height: 200px;
       display: flex;
       align-items: center;
-      z-index: 2000; /* Tăng Z-Index lên cực cao */
+      z-index: 2000;
+      /* Tăng Z-Index lên cực cao */
       transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -733,283 +925,399 @@
       transform: translate(-50%, -50%);
       pointer-events: auto;
       /* Đặt Z-Index cao nhất vũ trụ để không bị đè */
-      z-index: 99999 !important; 
+      z-index: 99999 !important;
     }
 
     /* --- CHẶN COPY VÀ KÉO THẢ --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
 
-  /* 1. Chặn bôi đen text toàn trang */
-  -webkit-user-select: none; /* Safari/Chrome */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  user-select: none;         /* Chuẩn chung */
-  
-  /* 2. Chặn kéo ảnh (tránh việc người dùng kéo ảnh thả ra desktop) */
-  -webkit-user-drag: none;
-}
+      /* 1. Chặn bôi đen text toàn trang */
+      -webkit-user-select: none;
+      /* Safari/Chrome */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE/Edge */
+      user-select: none;
+      /* Chuẩn chung */
 
-/* Các ô input hoặc textarea (nếu có) thì vẫn cho nhập liệu */
-input, textarea {
-  user-select: text;
-  -webkit-user-select: text;
-}
+      /* 2. Chặn kéo ảnh (tránh việc người dùng kéo ảnh thả ra desktop) */
+      -webkit-user-drag: none;
+    }
 
-/* =========================================
+    /* Các ô input hoặc textarea (nếu có) thì vẫn cho nhập liệu */
+    input,
+    textarea {
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    /* =========================================
    MOBILE RESPONSIVE (UPDATE: FIX TRÀN TEXT)
 ========================================= */
-@media (max-width: 768px) {
-  
-  /* Cho phép cuộn trang dài */
-  body, html {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+    @media (max-width: 768px) {
 
-  /* 1. BOX PROFILE (Tăng chiều cao để chứa đủ tên) */
-  .blur-box {
-    width: 90%;
-    height: 340px; /* Tăng chiều cao lên */
-    top: 190px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /* Đẩy Avatar lên một chút */
-  .layer-avatar {
-    top: 100px; /* Cũ là 100px */
-    transform: translateX(-50%) translateZ(60px);
-  }
+      /* Cho phép cuộn trang dài */
+      body,
+      html {
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
 
-  /* Đẩy Info (Tên & Status) xuống dưới Avatar */
-  .layer-info {
-    top: 236px; /* Vị trí mới */
-    left: 0;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateZ(40px);
-  }
+      /* 1. BOX PROFILE (Tăng chiều cao để chứa đủ tên) */
+      .blur-box {
+        width: 90%;
+        height: 340px;
+        /* Tăng chiều cao lên */
+        top: 190px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-  /* 2. BOX 'WHO AM I' (Tự động dài ra theo chữ) */
-  .blur-name-box-2 {
-    width: 90%;
-    height: auto; /* Để box tự dãn nở */
-    min-height: 220px; /* Chiều cao tối thiểu */
-    padding-bottom: 30px; /* Chừa khoảng trống dưới đáy */
-    
-    top: 500px; /* Đẩy xuống dưới box profile */
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+      /* Đẩy Avatar lên một chút */
+      .layer-avatar {
+        top: 100px;
+        /* Cũ là 100px */
+        transform: translateX(-50%) translateZ(60px);
+      }
 
-  /* Sửa tiêu đề .me */
-  .me {
-    position: relative; /* Xếp theo dòng chảy, không dính cứng nữa */
-    top: 20px;
-    left: 20px;
-    font-size: 30px; /* Chữ to rõ */
-    margin-bottom: 10px;
-    display: inline-block;
-    /* Style thanh tím */
-    background: rgba(138, 100, 200, 0.5);
-    padding: 5px 20px;
-    border-radius: 30px;
-  }
+      /* Đẩy Info (Tên & Status) xuống dưới Avatar */
+      .layer-info {
+        top: 236px;
+        /* Vị trí mới */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateZ(40px);
+      }
 
-  /* Sửa nội dung .me-2 */
-  .me-2 {
-    position: relative; /* Xếp ngay dưới tiêu đề */
-    top: 25px; /* Cách tiêu đề 25px */
-    left: 25px;
-    width: 85%; /* Giới hạn chiều rộng để không sát lề */
-    font-size: 15px;
-    line-height: 1.5; /* Giãn dòng cho dễ đọc */
-  }
+      /* 2. BOX 'WHO AM I' (Tự động dài ra theo chữ) */
+      .blur-name-box-2 {
+        width: 90%;
+        height: auto;
+        /* Để box tự dãn nở */
+        min-height: 220px;
+        /* Chiều cao tối thiểu */
+        padding-bottom: 30px;
+        /* Chừa khoảng trống dưới đáy */
 
-  /* 3. BOX SOCIAL */
-  .blur-social-box {
-    width: 90%;
-    height: 100px;
-    top: 677px; /* Xếp dưới Who am i */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .my-social { display: none; }
-  
-  .fb-pos, .ig-pos, .x-pos, .ani-pos, .line-wrapper, .discord-wrapper {
-    position: relative; top: auto; left: auto;
-    margin: 0;
-  }
+        top: 500px;
+        /* Đẩy xuống dưới box profile */
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-  /* 4. BOX PORTFOLIO */
-  .blur-portfolio-box {
-    width: 90%;
-    height: auto;
-    padding-bottom: 20px;
-    top: 980px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .portfolio-images {
-    grid-template-columns: repeat(2, 1fr);
-  }
+      /* Sửa tiêu đề .me */
+      .me {
+        position: relative;
+        /* Xếp theo dòng chảy, không dính cứng nữa */
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        /* Chữ to rõ */
+        margin-bottom: 10px;
+        display: inline-block;
+        /* Style thanh tím */
+        background: rgba(138, 100, 200, 0.5);
+        padding: 5px 20px;
+        border-radius: 30px;
+      }
 
-  /* 5. BOX GAMES */
-/* --- 5. BOX GAMES (CHI TIẾT BÊN TRONG) --- */
-    .blur-games-box {
-      width: 90%;
-      height: 430px; /* Giữ chiều cao để chứa đủ 4 game */
-      top: 1450px;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      /* Sửa nội dung .me-2 */
+      .me-2 {
+        position: relative;
+        /* Xếp ngay dưới tiêu đề */
+        top: 25px;
+        /* Cách tiêu đề 25px */
+        left: 25px;
+        width: 85%;
+        /* Giới hạn chiều rộng để không sát lề */
+        font-size: 15px;
+        line-height: 1.5;
+        /* Giãn dòng cho dễ đọc */
+      }
+
+      /* 3. BOX SOCIAL */
+      .blur-social-box {
+        width: 90%;
+        height: 100px;
+        top: 677px;
+        /* Xếp dưới Who am i */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .my-social {
+        display: none;
+      }
+
+      .fb-pos,
+      .ig-pos,
+      .x-pos,
+      .ani-pos,
+      .line-wrapper,
+      .discord-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0;
+      }
+
+      /* 4. BOX PORTFOLIO */
+      .blur-portfolio-box {
+        width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+        top: 980px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .portfolio-images {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* 5. BOX GAMES */
+      /* --- 5. BOX GAMES (CHI TIẾT BÊN TRONG) --- */
+      .blur-games-box {
+        width: 90%;
+        height: 430px;
+        /* Giữ chiều cao để chứa đủ 4 game */
+        top: 1450px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* 5.1. Cấu hình lại các thanh chứa logo (Background mờ của từng game) */
+      .blur-inside-games-box {
+        position: absolute;
+        width: 95%;
+        /* Rộng gần bằng hộp cha */
+        height: 70px;
+        /* Chiều cao vừa đủ cho 1 hàng */
+        left: 50%;
+        transform: translateX(-50%);
+        /* Căn giữa ngang */
+        border-radius: 20px;
+
+        /* Reset lại vị trí Top cho box đầu tiên (Wuwa) */
+        top: 15%;
+      }
+
+      /* Định vị lại 3 box con nằm bên trong box Wuwa */
+      /* Vì HTML lồng nhau nên ta dùng top tương đối so với box cha */
+      .box-1 {
+        top: 140%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* A9 (Cách box 1 khoảng 140%) */
+      .box-2 {
+        top: 280%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Calabiyau */
+      .box-3 {
+        top: 420%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Endfield */
+
+      /* 5.2. Chỉnh Logo nhỏ lại và căn sang trái */
+      .Wuwa_logo,
+      .A9_logo,
+      .Calabiyau_logo,
+      .Endfield_logo {
+        width: 50px;
+        /* Logo nhỏ lại chút */
+        left: 10px;
+        /* Cách lề trái 10px */
+        top: 50%;
+        transform: translateY(-50%);
+        /* Căn giữa dọc */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 5.3. Chỉnh Text (Username & UID) thẳng hàng bên cạnh Logo */
+      /* Gom chung các class Username và UID để chỉnh 1 lần */
+      .Username1,
+      .Username2,
+      .Username3,
+      .Username4,
+      .UID1,
+      .UID2,
+      .UID3,
+      .UID4 {
+        top: 120px;
+        left: 90px;
+        /* Cách lề trái 75px (để né logo ra) */
+        text-align: left;
+        width: auto;
+      }
+
+      /* Tinh chỉnh chiều dọc (Top) cho khớp với từng hàng */
+      /* Hàng 1: Wuwa */
+      .Username1 {
+        top: 18%;
+        font-size: 16px;
+      }
+
+      .UID1 {
+        top: 23%;
+        font-size: 13px;
+      }
+
+      /* Hàng 2: A9 */
+      .Username2 {
+        top: 41%;
+        font-size: 16px;
+      }
+
+      .UID2 {
+        top: 46%;
+        font-size: 13px;
+      }
+
+      /* Hàng 3: Calabiyau */
+      .Username3 {
+        top: 65%;
+        font-size: 16px;
+      }
+
+      .UID3 {
+        top: 70%;
+        font-size: 13px;
+      }
+
+      /* Hàng 4: Endfield */
+      .Username4 {
+        top: 84%;
+        font-size: 16px;
+      }
+
+      .UID4 {
+        top: 89%;
+        font-size: 13px;
+      }
+
+      /* 5.4. Chỉnh nút Copy sang bên phải cùng */
+      .copy-icon1,
+      .copy-icon2,
+      .copy-icon3,
+      .copy-icon4 {
+        left: 120px;
+        /* Bỏ left cũ */
+        right: 25px;
+        /* Căn sang phải */
+        top: 0;
+        font-size: 16px;
+        /* Icon nằm cùng dòng với UID */
+      }
+
+      /* 6. MUSIC BOX (Ghim đáy) */
+      .music-box-new {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 80px;
+        background: rgba(20, 20, 20, 0.9);
+        /* Nền đậm hơn để dễ nhìn chữ */
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .track-artist {
+        display: none;
+      }
+
+      /* Ẩn tên ca sĩ nếu chật quá */
+      .track-name {
+        font-size: 14px;
+        max-width: 160px;
+      }
+
+      /* 7. Ẩn ngăn kéo Mahiru */
+      #drawerBox {
+        display: none;
+      }
+
+      /* Tạo khoảng trống cuối trang */
+      body::after {
+        content: "";
+        display: block;
+        height: 150px;
+        width: 100%;
+      }
     }
 
-    /* 5.1. Cấu hình lại các thanh chứa logo (Background mờ của từng game) */
-    .blur-inside-games-box {
+    /* ... Các code trong mobile giữ nguyên ... */
+
+    /* --- TẠO KHOẢNG TRỐNG CUỐI TRANG (ĐỂ KHÔNG BỊ MUSIC BOX CHE) --- */
+    body::after {
+      content: "";
+      display: block;
       position: absolute;
-      width: 95%; /* Rộng gần bằng hộp cha */
-      height: 70px; /* Chiều cao vừa đủ cho 1 hàng */
-      left: 50%;
-      transform: translateX(-50%); /* Căn giữa ngang */
-      border-radius: 20px;
-      
-      /* Reset lại vị trí Top cho box đầu tiên (Wuwa) */
-      top: 15%; 
+
+      /* Box Game đang ở top 1450px, cao 420px => Đáy của nó là 1450 + 210 = 1660px */
+      /* Mình đặt vùng đệm bắt đầu ngay dưới đáy box game */
+      top: 1660px;
+
+      left: 0;
+      width: 100%;
+
+      /* Chiều cao vùng đệm: 200px (đủ để cuộn qua khỏi Music Box 80px) */
+      height: 200px;
+
+      background: transparent;
+      z-index: -10;
+      /* Nằm dưới cùng */
     }
-
-    /* Định vị lại 3 box con nằm bên trong box Wuwa */
-    /* Vì HTML lồng nhau nên ta dùng top tương đối so với box cha */
-    .box-1 { top: 140%; left: 50%; transform: translateX(-50%); } /* A9 (Cách box 1 khoảng 140%) */
-    .box-2 { top: 280%; left: 50%; transform: translateX(-50%); } /* Calabiyau */
-    .box-3 { top: 420%; left: 50%; transform: translateX(-50%); } /* Endfield */
-
-    /* 5.2. Chỉnh Logo nhỏ lại và căn sang trái */
-    .Wuwa_logo, .A9_logo, .Calabiyau_logo, .Endfield_logo {
-      width: 50px; /* Logo nhỏ lại chút */
-      left: 10px; /* Cách lề trái 10px */
-      top: 50%;
-      transform: translateY(-50%); /* Căn giữa dọc */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    /* 5.3. Chỉnh Text (Username & UID) thẳng hàng bên cạnh Logo */
-    /* Gom chung các class Username và UID để chỉnh 1 lần */
-    .Username1, .Username2, .Username3, .Username4,
-    .UID1, .UID2, .UID3, .UID4 {
-      top: 120px;
-      left: 90px; /* Cách lề trái 75px (để né logo ra) */
-      text-align: left;
-      width: auto;
-    }
-
-    /* Tinh chỉnh chiều dọc (Top) cho khớp với từng hàng */
-    /* Hàng 1: Wuwa */
-    .Username1 { top: 18%; font-size: 16px; }
-    .UID1      { top: 23%; font-size: 13px; }
-
-    /* Hàng 2: A9 */
-    .Username2 { top: 41%; font-size: 16px; }
-    .UID2      { top: 46%; font-size: 13px; }
-
-    /* Hàng 3: Calabiyau */
-    .Username3 { top: 65%; font-size: 16px; }
-    .UID3      { top: 70%; font-size: 13px; }
-
-    /* Hàng 4: Endfield */
-    .Username4 { top: 84%; font-size: 16px; }
-    .UID4      { top: 89%; font-size: 13px; }
-
-    /* 5.4. Chỉnh nút Copy sang bên phải cùng */
-    .copy-icon1, .copy-icon2, .copy-icon3, .copy-icon4 {
-      left: 120px; /* Bỏ left cũ */
-      right: 25px; /* Căn sang phải */
-      top: 0; 
-      font-size: 16px;
-      /* Icon nằm cùng dòng với UID */
-    }
-
-  /* 6. MUSIC BOX (Ghim đáy) */
-  .music-box-new {
-    position: fixed;
-    top: auto;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    height: 80px;
-    background: rgba(20, 20, 20, 0.9); /* Nền đậm hơn để dễ nhìn chữ */
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-  
-  .track-artist { display: none; } /* Ẩn tên ca sĩ nếu chật quá */
-  .track-name { font-size: 14px; max-width: 160px; }
-
-  /* 7. Ẩn ngăn kéo Mahiru */
-  #drawerBox { display: none; }
-  
-  /* Tạo khoảng trống cuối trang */
-  body::after {
-    content: "";
-    display: block;
-    height: 150px;
-    width: 100%;
-  }
-}
-
-/* ... Các code trong mobile giữ nguyên ... */
-
-  /* --- TẠO KHOẢNG TRỐNG CUỐI TRANG (ĐỂ KHÔNG BỊ MUSIC BOX CHE) --- */
-  body::after {
-    content: "";
-    display: block;
-    position: absolute;
-    
-    /* Box Game đang ở top 1450px, cao 420px => Đáy của nó là 1450 + 210 = 1660px */
-    /* Mình đặt vùng đệm bắt đầu ngay dưới đáy box game */
-    top: 1660px; 
-    
-    left: 0;
-    width: 100%;
-    
-    /* Chiều cao vùng đệm: 200px (đủ để cuộn qua khỏi Music Box 80px) */
-    height: 200px; 
-    
-    background: transparent;
-    z-index: -10; /* Nằm dưới cùng */
-  }
-
   </style>
 </head>
 
 <body>
   <audio id="bgm" autoplay loop>
-    <source src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/Music/%E3%82%82%E3%81%A3%E3%81%A8%E8%A6%8B%E3%81%A6%E3%81%84%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84.mp3" type="audio/mp3">
+    <source
+      src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/Music/%E3%82%82%E3%81%A3%E3%81%A8%E8%A6%8B%E3%81%A6%E3%81%84%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84.mp3"
+      type="audio/mp3">
   </audio>
 
   <video autoplay muted loop class="video-background">
-    <source src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/background%20video/Comp%201_4.mp4" type="video/mp4" />
+    <source src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/background%20video/Comp%201_4.mp4"
+      type="video/mp4" />
     Trình duyệt của bạn không hỗ trợ thẻ video.
   </video>
 
   <div class="blur-box" id="profileBox">
     <div class="inner-3d-card">
       <div class="layer-cover">
-        <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/Shiina.Mahiru.full.4311647.jpg" alt="Cover">
+        <img
+          src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/Shiina.Mahiru.full.4311647.jpg"
+          alt="Cover">
         <div class="cover-overlay"></div>
       </div>
       <div class="layer-avatar">
-        <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/IMG_20250404_173058.jpg" alt="Avatar">
+        <img
+          src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/IMG_20250404_173058.jpg"
+          alt="Avatar">
       </div>
       <div class="layer-info">
         <h1 class="name-glitch" data-text="kinne_luu">kinne_luu</h1>
@@ -1023,7 +1331,9 @@ input, textarea {
 
   <div class="blur-name-box-2">
     <p class="me">Who am i??</p>
-    <p class="me-2">Ya hallooo~~ , just call me Kinne, im a boi who fall in luv w/ anime, manga, light/visual novel and gacha game :D ( ofc AAA game and other) - i like to use my imagination to create 3D scenery with Blender, or anime composite in After Effect</p>
+    <p class="me-2">Ya hallooo~~ , just call me Kinne, im a boi who fall in luv w/ anime, manga, light/visual novel and
+      gacha game :D ( ofc AAA game and other) - i like to use my imagination to create 3D scenery with Blender, or anime
+      composite in After Effect</p>
   </div>
 
   <div class="blur-social-box">
@@ -1060,34 +1370,55 @@ input, textarea {
     <p class="what-can-i-do">What can i do</p>
     <p class="what-can-i-do-2">Not too much, but here is some anime background scene I made :D</p>
     <div class="portfolio-images">
-      <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/alime%20background%20file/20250709_004547.jpg" class="pf-img">
-      <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/alime%20background%20file/IMG_20250617_190900.jpg" class="pf-img">
-      <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/alime%20background%20file/IMG_20251107_111548.png" class="pf-img">
-      <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/alime%20background%20file/New%20Project%2065%20%5B7F642B5%5D.png" class="pf-img">
-      <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/alime%20background%20file/New%20Project%2043%20%5B4C9E502%5D.png" class="pf-img">
+      <img
+        src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/alime%20background%20file/20250709_004547.jpg"
+        class="pf-img">
+      <img
+        src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/alime%20background%20file/IMG_20250617_190900.jpg"
+        class="pf-img">
+      <img
+        src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/alime%20background%20file/IMG_20251107_111548.png"
+        class="pf-img">
+      <img
+        src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/alime%20background%20file/New%20Project%2065%20%5B7F642B5%5D.png"
+        class="pf-img">
+      <img
+        src="https://raw.githubusercontent.com/kienmanhluu/kinne/main/alime%20background%20file/New%20Project%2043%20%5B4C9E502%5D.png"
+        class="pf-img">
     </div>
   </div>
 
   <div class="blur-games-box">
     <p class="my-games">My Games</p>
     <h1 class="Username1">Kinne~Nya</h1>
-    <h2 class="UID1">UID : <span class="copy-text1">900577083</span><i class="fa-regular fa-copy copy-icon1" onclick="copyText1(this)"></i></h2>
+    <h2 class="UID1">UID : <span class="copy-text1">900577083</span><i class="fa-regular fa-copy copy-icon1"
+        onclick="copyText1(this)"></i></h2>
     <h1 class="Username2">Kinne_luu</h1>
-    <h2 class="UID2">UID : <span class="copy-text2">3312645</span><i class="fa-regular fa-copy copy-icon2" onclick="copyText2(this)"></i></h2>
+    <h2 class="UID2">UID : <span class="copy-text2">3312645</span><i class="fa-regular fa-copy copy-icon2"
+        onclick="copyText2(this)"></i></h2>
     <h1 class="Username3">キンネ</h1>
-    <h2 class="UID3">UID : <span class="copy-text3">3159454</span><i class="fa-regular fa-copy copy-icon3" onclick="copyText3(this)"></i></h2>
+    <h2 class="UID3">UID : <span class="copy-text3">3159454</span><i class="fa-regular fa-copy copy-icon3"
+        onclick="copyText3(this)"></i></h2>
     <h1 class="Username4">NaN</h1>
-    <h2 class="UID4">UID : <span class="copy-text4">NaN</span><i class="fa-regular fa-copy copy-icon4" onclick="copyText4(this)"></i></h2>
+    <h2 class="UID4">UID : <span class="copy-text4">NaN</span><i class="fa-regular fa-copy copy-icon4"
+        onclick="copyText4(this)"></i></h2>
     <div class="blur-inside-games-box">
-      <div class="Wuwa_logo"><img src="https://play-lh.googleusercontent.com/g-47eiWo7LYLBFOQrYNzjrsTf4HRzUT--lSGrqJ9BPJFV72FEdYo5rSMI6AXBDyzrA" alt="wuwa-logo"></div>
+      <div class="Wuwa_logo"><img
+          src="https://play-lh.googleusercontent.com/g-47eiWo7LYLBFOQrYNzjrsTf4HRzUT--lSGrqJ9BPJFV72FEdYo5rSMI6AXBDyzrA"
+          alt="wuwa-logo"></div>
       <div class="blur-inside-games-box box-1">
-        <div class="A9_logo"><img src="https://upload.wikimedia.org/wikipedia/vi/a/aa/Arknights_icon.png" alt="A9-logo"></div>
+        <div class="A9_logo"><img src="https://upload.wikimedia.org/wikipedia/vi/a/aa/Arknights_icon.png" alt="A9-logo">
+        </div>
       </div>
       <div class="blur-inside-games-box box-2">
-        <div class="Calabiyau_logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdK8zE-YB-kkAMkFD-SNSYsU7N9Hx7aflJQ&s" alt="Calabiyau-logo"></div>
+        <div class="Calabiyau_logo"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdK8zE-YB-kkAMkFD-SNSYsU7N9Hx7aflJQ&s"
+            alt="Calabiyau-logo"></div>
       </div>
       <div class="blur-inside-games-box box-3">
-        <div class="Endfield_logo"><img src="https://img.tapimg.net/market/images/963421fe5b2f8abd198cda0f74318399.png/appicon?t=1" alt="Endfield-logo"></div>
+        <div class="Endfield_logo"><img
+            src="https://img.tapimg.net/market/images/963421fe5b2f8abd198cda0f74318399.png/appicon?t=1"
+            alt="Endfield-logo"></div>
       </div>
     </div>
   </div>
@@ -1095,14 +1426,16 @@ input, textarea {
   <div class="music-box-new">
     <div class="player-header">
       <div class="album-art">
-        <img src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/Shiina.Mahiru.full.4311647.jpg" alt="Album Art">
+        <img
+          src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/Shiina.Mahiru.full.4311647.jpg"
+          alt="Album Art">
       </div>
       <div class="track-info">
         <h3 class="track-name">Motto Miteite Kudasai</h3>
         <p class="track-artist">Mahiru Shiina</p>
       </div>
     </div>
-    
+
     <div class="control-area">
       <div class="play-btn-circle" onclick="toggleMusic()">
         <i class="fa-solid fa-play" id="play-icon"></i>
@@ -1112,7 +1445,8 @@ input, textarea {
 
   <div id="drawerBox">
     <div id="drawerContent">
-      <img id="draggableImg" src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/mahihi.png">
+      <img id="draggableImg"
+        src="https://raw.githubusercontent.com/kienmanhluu/kinne/refs/heads/main/image%20pack/mahihi.png">
     </div>
     <div id="drawerHandle"></div>
   </div>
@@ -1124,7 +1458,7 @@ input, textarea {
   <script>
     const card = document.getElementById("profileCard");
     const container = document.querySelector(".profile-card-wrapper");
-    if(container && card) {
+    if (container && card) {
       container.addEventListener("mousemove", (e) => {
         const rect = container.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -1330,11 +1664,11 @@ input, textarea {
       requestAnimationFrame(updatePhysics);
     }
     window.addEventListener('resize', () => {
-      if(isThrown) {
+      if (isThrown) {
         const floor = window.innerHeight - img.offsetHeight;
         const rightWall = window.innerWidth - img.offsetWidth;
-        if(pos.y > floor) pos.y = floor;
-        if(pos.x > rightWall) pos.x = rightWall;
+        if (pos.y > floor) pos.y = floor;
+        if (pos.x > rightWall) pos.x = rightWall;
         img.style.left = pos.x + "px";
         img.style.top = pos.y + "px";
       }
@@ -1370,47 +1704,48 @@ input, textarea {
   </script>
 
   <script>
-  // --- BẢO MẬT: CHẶN CLICK CHUỘT PHẢI & PHÍM TẮT ---
+    // --- BẢO MẬT: CHẶN CLICK CHUỘT PHẢI & PHÍM TẮT ---
 
-  // 1. Chặn menu chuột phải (Right Click)
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    // Bạn có thể hiện một thông báo nhỏ nếu muốn, ví dụ: alert("Don't steal my waifu! >.<");
-  });
+    // 1. Chặn menu chuột phải (Right Click)
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      // Bạn có thể hiện một thông báo nhỏ nếu muốn, ví dụ: alert("Don't steal my waifu! >.<");
+    });
 
-  // 2. Chặn kéo thả native của trình duyệt (Để tránh kéo ảnh lưu về)
-  // Lưu ý: Code này không ảnh hưởng đến bé Mahiru vì bé dùng logic kéo thả riêng
-  document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  });
+    // 2. Chặn kéo thả native của trình duyệt (Để tránh kéo ảnh lưu về)
+    // Lưu ý: Code này không ảnh hưởng đến bé Mahiru vì bé dùng logic kéo thả riêng
+    document.addEventListener('dragstart', function (e) {
+      e.preventDefault();
+    });
 
-  // 3. Chặn các phím tắt F12, Ctrl+U, Ctrl+S, Ctrl+Shift+I...
-  document.onkeydown = function(e) {
+    // 3. Chặn các phím tắt F12, Ctrl+U, Ctrl+S, Ctrl+Shift+I...
+    document.onkeydown = function (e) {
 
       // Chặn F12 (DevTools)
-    if (e.keyCode == 123) {
-      return false;
-    }
+      if (e.keyCode == 123) {
+        return false;
+      }
 
-    // Chặn Ctrl+I (DevTools)
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-      return false;
-    }
-    // Chặn Ctrl+J (Console)
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-      return false;
-    }
-    // Chặn Ctrl+U (View Source)
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-      return false;
-    }
-    // Chặn Ctrl+S (Save Page)
-    if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
-      return false;
-    }
-  };
-</script>
+      // Chặn Ctrl+I (DevTools)
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      // Chặn Ctrl+J (Console)
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      // Chặn Ctrl+U (View Source)
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+      // Chặn Ctrl+S (Save Page)
+      if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+        return false;
+      }
+    };
+  </script>
 
 
 </body>
+
 </html>
